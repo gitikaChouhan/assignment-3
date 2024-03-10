@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title%> -Meal Mingle</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/"> Home</a></li>
+                <li><a href="/on-the-menu">on-the-menu</a></li>
+                <li><a href="/sign-up">sign-up</a></li>
+                <li><a href="/log-in">log-in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <%- body %>
+    </main>
+
+    <footer>
+       <%- include('partials/footer') %> 
+    </footer>
+    
+</body>
+</html>

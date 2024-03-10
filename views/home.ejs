@@ -1,0 +1,14 @@
+<%- include('layouts/main')%>
+
+<section>
+    <h1>Welcome to our meal kit Website!!</h1>
+</section>
+
+<section>
+    <h2>Featured meal Kits</h2>
+    <div class = "meal-kit-grid">
+        <% featuredMealKits.forEach(mealKit => { %>
+        <% include ("../views/partial/mealKit.ejs")%>
+    <%});%>
+    </div>
+</section>

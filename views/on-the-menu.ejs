@@ -1,0 +1,17 @@
+<% layout('layouts/main')%>
+
+<section>
+    <h1>Explore Meal Kits for you</h1>
+</section>
+
+<section>
+    <h2>Classic Meals</h2>
+    <div class = "meal-kit-grid">
+        <% mealKitsByCategory.forEach(category => {%>
+        <h3><%= category.categoryName %></h3>
+    <% category.mealKits.gorEach(mealKit => { %>
+    <% include partials/mealKit.ejs%>
+<%});%>
+<%  }); %>
+    </div>
+</section>

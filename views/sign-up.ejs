@@ -1,0 +1,25 @@
+
+<%- include("../partial/navbar") %>
+
+<section> 
+    <h1>sign-up</h1>
+    <form method = "post" action = "/sign-up">
+        <label for="firstName">First Name</label><br>
+        <input type="text" id="firstName" name = "firstName" required> <br><br>
+        
+        <% if(validationMessages && validationMessages.FirstName) { %>
+         <span style="color: red;"><%= validationMessages.firstName%></span><br> <br>
+        <% } %>
+
+
+        <label for="lastName">Last Name</label><br>
+        <input type="text" id="lastName" name="lastName" required> <br><br>
+        <label for="email">Email Address</label> <br>
+        <input type="email" id="email" name="email" required> <br><br>
+        <label for="password">Password</label> 
+        <input type="password" name="password" id="password" required> <br><br>
+    
+        <input type="submit" name="register" >
+    </form>
+    </section>
+<%- include("../partial/footer")%>
